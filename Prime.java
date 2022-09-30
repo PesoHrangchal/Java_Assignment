@@ -5,18 +5,11 @@ public class Prime {
 		Scanner sc=new Scanner(System.in);
 		System.out.print("Enter a number:");
 		int a=sc.nextInt();
-		boolean prime=false;
-		if(a==1||a==2) {
-			prime=true;
-		}else {
+		boolean prime=true;
+		if(a!=1||a!=2) {
 			for(int i=2;i<a/2;i++) {
 				if(a%i==0) {
 					prime=false;
-					break;
-				}
-				else {
-					prime=true;
-				}
 			}
 		}
 		if(prime==true) {
@@ -25,4 +18,5 @@ public class Prime {
 			System.out.print("Not Prime Number");
 		}
 	}
+ }
 }
